@@ -6,11 +6,12 @@ html {
 
 body {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     font-size: 100%;
 }
 
 .card {
+
     width: 50% !important;
     border-radius: 18px !important;
 }
@@ -37,18 +38,108 @@ body {
     justify-content: end;
 }
 
+.more i {
+    font-size: 4w;
+}
+
 .floatingbox {
-    height: 100px;
+    height: 20%;
     background-position: 0px -75px;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(/assets/images/floatTileBg.png);
 }
 
-.floatingbox p{
+.floatingbox p {
     font-size: 1.5vw;
 }
 
+.chatbox {
+    height: 80%;
+    overflow-y: scroll;
+    gap: 2vw;
+}
+
+.chatbox::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.chatbox::-webkit-scrollbar {
+    width: .5vw;
+    background-color: #F5F5F5;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+    border-radius: .4vw;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}
+
+.chatbox .bot-message p {
+    width: fit-content;
+    text-align: left;
+    border: 1px solid blue;
+    color: rgba(34, 32, 159, 1);
+    position: relative;
+    font-size: 1.2vw;
+    border-radius: 25px;
+    padding: .5vw 1vw !important;
+    margin: 0;
+    transition: 0.3s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+.chatbox .visitor-message p {
+    font-size: 1.2vw;
+    width: fit-content;
+    text-align: right;
+    background-color: #f0f2f7;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: .5vw 1vw !important;
+    margin: 0;
+}
+
+.chatbox .bot-message p::after {
+    background: rgb(34, 32, 159);
+    background: linear-gradient(153deg, rgba(34, 32, 159, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 3vw;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-110%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.3s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+.chatbox .bot-message p:hover::after {
+    transform: translate(0, 0);
+}
+
+.chatbox .bot-message p:hover {
+    border: 2px solid transparent;
+    color: #EEF7FC;
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+
+@media only screen and (min-width:1200px) {
+
+    .floatingbox {
+        height: 8vw;
+        background-position: 0px -5vw;
+    }
+}
 
 @media only screen and (max-width:1200px) {
 
@@ -65,10 +156,19 @@ body {
         background-position: 0px -5vw;
     }
 
-    .floatingbox p{
+    .floatingbox p {
         font-size: 1.7vw;
     }
-    
+
+    .chatbox .bot-message p {
+        font-size: 1.7vw;
+    }
+
+    .chatbox .visitor-message p {
+        font-size: 1.7vw;
+    }
+
+
 }
 
 @media only screen and (max-width:768px) {
@@ -87,10 +187,19 @@ body {
         background-position: 0px -15vw !important;
     }
 
-    .floatingbox p{
+    .floatingbox p {
         font-size: 1.9vw;
     }
-    
+
+    .chatbox .bot-message p {
+        font-size: 2.5vw;
+    }
+
+    .chatbox .visitor-message p {
+        font-size: 2.5vw;
+    }
+
+
 }
 
 @media only screen and (max-width:576px) {
@@ -126,6 +235,7 @@ body {
     }
 
     .more i {
+        font-size: 4.5vw;
         border: 1px solid white;
         padding: 0 20vw;
         border-radius: 8px;
@@ -136,8 +246,16 @@ body {
         background-position: 0px -9.5vw !important;
     }
 
-    .floatingbox p{
+    .floatingbox p {
         font-size: 3.3vw;
+    }
+
+    .chatbox .bot-message p {
+        font-size: 3.5vw;
+    }
+
+    .chatbox .visitor-message p {
+        font-size: 3.5vw;
     }
 
 }
