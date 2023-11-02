@@ -1,0 +1,143 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+}
+
+.card {
+    width: 50% !important;
+    border-radius: 18px !important;
+}
+
+.card-header {
+    border-top-left-radius: 18px !important;
+    border-top-right-radius: 18px !important;
+    background: rgb(34, 32, 159);
+    background: linear-gradient(153deg, rgba(34, 32, 159, 1) 0%, rgba(0, 212, 255, 1) 100%);
+}
+
+.profileImg {
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.profileImg img {
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.more {
+    font-size: 3vw;
+    justify-content: end;
+}
+
+.floatingbox {
+    height: 100px;
+    background-position: 0px -75px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/assets/images/floatTileBg.png);
+}
+
+.floatingbox p{
+    font-size: 1.5vw;
+}
+
+
+@media only screen and (max-width:1200px) {
+
+    .floatingbox {
+        height: 8vw;
+        background-position: 0px -5vw;
+    }
+}
+
+@media only screen and (max-width:990px) {
+
+    .floatingbox {
+        height: 9vw;
+        background-position: 0px -5vw;
+    }
+
+    .floatingbox p{
+        font-size: 1.7vw;
+    }
+    
+}
+
+@media only screen and (max-width:768px) {
+    .card {
+        width: 100% !important;
+        border-radius: 0 !important;
+    }
+
+    .card-header {
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+    }
+
+    .floatingbox {
+        height: 12vw;
+        background-position: 0px -15vw !important;
+    }
+
+    .floatingbox p{
+        font-size: 1.9vw;
+    }
+    
+}
+
+@media only screen and (max-width:576px) {
+    .card {
+        width: 100% !important;
+        border-radius: 0 !important;
+    }
+
+    .card-header {
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        justify-content: center;
+    }
+
+    .profileImg {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-header .flex-column {
+        align-items: center;
+    }
+
+    .profileImg img {
+        width: 30vw !important;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .more {
+        justify-content: center !important;
+        gap: 1vw;
+    }
+
+    .more i {
+        border: 1px solid white;
+        padding: 0 20vw;
+        border-radius: 8px;
+    }
+
+    .floatingbox {
+        height: 15vw;
+        background-position: 0px -9.5vw !important;
+    }
+
+    .floatingbox p{
+        font-size: 3.3vw;
+    }
+
+}
