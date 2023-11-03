@@ -48,9 +48,9 @@
                         <p>Hi, how can I help you?</p>
 
                     </div>
-                    <div class="responseRating ">
+                    <div class="responseRating d-flex align-items-center ">
                         <i class="ri-thumb-up-line "></i>
-                        <span class="px-2">|</span>
+                        <span class="dividerLine">|</span>
                         <i class="ri-thumb-down-line "></i>
                     </div>
                     <p class="m-0">Was this helpful?</p>
@@ -61,25 +61,29 @@
                 </div>
             </div>
         </div>
-        <div class="card-footer">
-            <div class="row">
-                <div class="col-sm-12 form-group">
-                    <input type="text" class="form-control" id="visitorChatInput" placeholder="Enter your message...">
+        <div class="card-footer p-0">
+            <div class="row m-0">
+                <div class="col-sm-12 form-group p-0 m-0">
+                    <input type="text" class="form-control border-0 shadow-none" id="visitorChatInput"
+                        placeholder="Enter your message...">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-2">
+            <div class="row m-0">
+                <div class="col-sm-2 footerIcon">
                     <i class="ri-robot-2-fill"></i>
                 </div>
-                <div class="col-sm-2">
-                    <i class="ri-attachment-fill"></i>
+                <div class="col-sm-2  footerIcon ">
+                    <label for="fileInput" class="btn p-0 m-0">
+                        <i class="ri-attachment-fill"></i>
+                    </label>
+                    <input type="file" style="display: none" id="fileInput" />
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2  footerIcon ">
                     <i class="ri-emotion-fill"></i>
                 </div>
-                <div class="col-sm-6">
-                    <span>POWERED BY</span><span class="text-warning"><i
-                            class="ri-wireless-charging-fill"></i></span>Kreate
+                <div class="col-sm-6 footerIcon footerIntro">
+                    POWERED BY<span class="text-primary"><i
+                            class="ri-wireless-charging-fill"></i></span><span>Kreate</span>
                 </div>
             </div>
             <div class="send">
