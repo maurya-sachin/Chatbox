@@ -244,6 +244,10 @@ body {
 
 /* Card footer */
 
+.card-footer {
+    position: relative;
+}
+
 .form-control {
     padding: 2.5vw 1.5vw !important;
 }
@@ -279,11 +283,35 @@ body {
     color: #000;
 }
 
+.send {
+    position: absolute;
+    text-align: center;
+    bottom: 25%;
+    right: -3.5%;
+    font-size: 2.8vw;
+    color: white;
+    background: linear-gradient(153deg, rgba(34, 32, 159, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 50%;
+    padding: .5vw 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.2s;
+}
 
+.send:hover {
+    transform: scale(1.2);
+    bottom: 25%;
+    margin-right: 5%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
 
+.card-footer button {
+    border: none;
+}
 
-
-@media only screen and (min-width:1200px) {}
 
 @media only screen and (max-width:990px) {
 
@@ -416,7 +444,17 @@ body {
         font-size: 1.9vw;
     }
 
+    .send {
+        right: 1.5%;
+        bottom: 40%;
+        font-size: 3.2vw;
+    }
 
+    .send:hover {
+        margin-right: 1.5%;
+        font-size: 3.4vw;
+        bottom: 40%;
+    }
 
 }
 
@@ -518,5 +556,19 @@ body {
     .footerIntro span {
         font-size: 2.5vw;
     }
+
+    .send {
+        right: 1.5%;
+        bottom: 70%;
+        font-size: 4vw;
+        margin-right: 2vw;
+    }
+
+    .send:hover {
+        margin-right: 3vw;
+        font-size: 4.2vw;
+        bottom: 70%;
+    }
+
 
 }
