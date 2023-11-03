@@ -63,7 +63,8 @@ body {
 /* chatbox */
 
 .chatbox {
-    overflow-y: hidden;
+    height: 80%;
+    overflow-y: auto;
     gap: 1vw;
 }
 
@@ -194,6 +195,7 @@ body {
 /* bot reply box */
 
 .bot-reply {
+    height: fit-content;
     column-gap: 1vw;
 }
 
@@ -284,6 +286,8 @@ body {
 }
 
 .send {
+    height: 4.5vw;
+    width: 4.5vw;
     position: absolute;
     text-align: center;
     bottom: 25%;
@@ -292,11 +296,10 @@ body {
     color: white;
     background: linear-gradient(153deg, rgba(34, 32, 159, 1) 0%, rgba(0, 212, 255, 1) 100%);
     border-radius: 50%;
-    padding: .5vw 1vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all ease 0.2s;
+    transition: all ease 0.3s;
 }
 
 .send:hover {
@@ -306,10 +309,6 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
-}
-
-.card-footer button {
-    border: none;
 }
 
 
@@ -558,6 +557,7 @@ body {
     }
 
     .send {
+        padding: 3vw;
         right: 1.5%;
         bottom: 70%;
         font-size: 4vw;
