@@ -200,8 +200,11 @@ body {
 }
 
 .bot-reply>p {
+    visibility: hidden;
     font-size: .8vw !important;
     color: rgba(85, 85, 85, 0.719);
+    opacity: 0;
+    transition: opacity 250ms ease-in, visibility 0ms ease-in 250ms;
 }
 
 /* response rating box */
@@ -215,6 +218,9 @@ body {
     border-radius: 25px;
     background-color: #f0f2f7;
     position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 250ms ease-in, visibility 0ms ease-in 250ms;
 }
 
 .responseRating i {
@@ -226,7 +232,6 @@ body {
 .responseRating i:hover {
     font-size: 1.7vw;
     padding: 0;
-    color: rgb(34, 32, 159);
 }
 
 .responseRating .ri-thumb-up-line {
@@ -242,6 +247,13 @@ body {
 
 .dividerLine {
     padding: 0 1vw;
+}
+
+.bot-reply:hover>p,
+.bot-reply:hover .responseRating {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 250ms ease-in, visibility 0ms ease-in 0ms;
 }
 
 /* Card footer */
